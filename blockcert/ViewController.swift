@@ -9,16 +9,17 @@ import UIKit
 import LocalAuthentication
 
 class ViewController: UIViewController {
+  
 
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    callBiometricAuth()
+    
   }
   
-  func callBiometricAuth() {
-  authenticationWithTouchID() //Function Call
-  }
+  @IBAction func onBtnClick(_ sender: Any) {
+    authenticationWithTouchID() //Function Call
+}
   
   func ShowAlert(message: String) {
     let alertController = UIAlertController(title: "Biometric Auth", message: message, preferredStyle:UIAlertController.Style.alert)
