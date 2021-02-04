@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A38F473925CBD70000CD21CB /* A0SimpleKeychain+KeyPair.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F42F725CBBC6200CD21CB /* A0SimpleKeychain+KeyPair.m */; };
+		A38F473C25CBD70E00CD21CB /* A0SimpleKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F42F425CBBC6200CD21CB /* A0SimpleKeychain.m */; };
+		A38F474125CBD74B00CD21CB /* A0SimpleKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F42F425CBBC6200CD21CB /* A0SimpleKeychain.m */; };
+		A38F474425CBD75200CD21CB /* A0SimpleKeychain+KeyPair.m in Sources */ = {isa = PBXBuildFile; fileRef = A38F42F725CBBC6200CD21CB /* A0SimpleKeychain+KeyPair.m */; };
 		A3E7BD6F25B53C8400DCE101 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E7BD6E25B53C8400DCE101 /* AppDelegate.swift */; };
 		A3E7BD7125B53C8400DCE101 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E7BD7025B53C8400DCE101 /* SceneDelegate.swift */; };
 		A3E7BD7325B53C8400DCE101 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E7BD7225B53C8400DCE101 /* ViewController.swift */; };
@@ -22,6 +26,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A38F42F425CBBC6200CD21CB /* A0SimpleKeychain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = A0SimpleKeychain.m; sourceTree = "<group>"; };
+		A38F42F525CBBC6200CD21CB /* A0SimpleKeychain+KeyPair.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "A0SimpleKeychain+KeyPair.h"; sourceTree = "<group>"; };
+		A38F42F625CBBC6200CD21CB /* A0SimpleKeychain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = A0SimpleKeychain.h; sourceTree = "<group>"; };
+		A38F42F725CBBC6200CD21CB /* A0SimpleKeychain+KeyPair.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "A0SimpleKeychain+KeyPair.m"; sourceTree = "<group>"; };
+		A38F42FC25CBBCE800CD21CB /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		A38F430D25CBC1C900CD21CB /* blockcert.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = blockcert.entitlements; sourceTree = "<group>"; };
+		A38F430E25CBC20D00CD21CB /* blockcert2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = blockcert2.entitlements; sourceTree = "<group>"; };
 		A3E7BD6B25B53C8400DCE101 /* blockcert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = blockcert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3E7BD6E25B53C8400DCE101 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3E7BD7025B53C8400DCE101 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +66,7 @@
 		A3E7BD6225B53C8400DCE101 = {
 			isa = PBXGroup;
 			children = (
+				A38F430E25CBC20D00CD21CB /* blockcert2.entitlements */,
 				A3E7BD6D25B53C8400DCE101 /* blockcert */,
 				A3E7BD6C25B53C8400DCE101 /* Products */,
 			);
@@ -72,6 +84,11 @@
 		A3E7BD6D25B53C8400DCE101 /* blockcert */ = {
 			isa = PBXGroup;
 			children = (
+				A38F430D25CBC1C900CD21CB /* blockcert.entitlements */,
+				A38F42F725CBBC6200CD21CB /* A0SimpleKeychain+KeyPair.m */,
+				A38F42F625CBBC6200CD21CB /* A0SimpleKeychain.h */,
+				A38F42F525CBBC6200CD21CB /* A0SimpleKeychain+KeyPair.h */,
+				A38F42F425CBBC6200CD21CB /* A0SimpleKeychain.m */,
 				A3E7BD6E25B53C8400DCE101 /* AppDelegate.swift */,
 				A3E7BD7025B53C8400DCE101 /* SceneDelegate.swift */,
 				A3E7BD7225B53C8400DCE101 /* ViewController.swift */,
@@ -80,6 +97,7 @@
 				A3E7BD7925B53C8700DCE101 /* LaunchScreen.storyboard */,
 				A3E7BD9225B53DD900DCE101 /* blockcert2-Info.plist */,
 				A3E7BD7C25B53C8700DCE101 /* Info.plist */,
+				A38F42FC25CBBCE800CD21CB /* BridgingHeader.h */,
 			);
 			path = blockcert;
 			sourceTree = "<group>";
@@ -182,6 +200,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A38F473925CBD70000CD21CB /* A0SimpleKeychain+KeyPair.m in Sources */,
+				A38F473C25CBD70E00CD21CB /* A0SimpleKeychain.m in Sources */,
 				A3E7BD7325B53C8400DCE101 /* ViewController.swift in Sources */,
 				A3E7BD6F25B53C8400DCE101 /* AppDelegate.swift in Sources */,
 				A3E7BD7125B53C8400DCE101 /* SceneDelegate.swift in Sources */,
@@ -192,7 +212,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A38F474125CBD74B00CD21CB /* A0SimpleKeychain.m in Sources */,
 				A3E7BD8625B53DD900DCE101 /* ViewController.swift in Sources */,
+				A38F474425CBD75200CD21CB /* A0SimpleKeychain+KeyPair.m in Sources */,
 				A3E7BD8725B53DD900DCE101 /* AppDelegate.swift in Sources */,
 				A3E7BD8825B53DD900DCE101 /* SceneDelegate.swift in Sources */,
 			);
@@ -341,8 +363,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = blockcert/blockcert.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PNQ3TRY585;
+				DEVELOPMENT_TEAM = 6DSLY3RNV7;
 				INFOPLIST_FILE = blockcert/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -350,6 +373,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bc.bioauth1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/himanshu/Documents/Personal_Documents/blockcert/blockcert/BridgingHeader.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -360,8 +384,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = blockcert/blockcert.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PNQ3TRY585;
+				DEVELOPMENT_TEAM = 6DSLY3RNV7;
 				INFOPLIST_FILE = blockcert/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -369,6 +394,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bc.bioauth1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/himanshu/Documents/Personal_Documents/blockcert/blockcert/BridgingHeader.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -379,8 +405,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = blockcert2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PNQ3TRY585;
+				DEVELOPMENT_TEAM = 6DSLY3RNV7;
 				INFOPLIST_FILE = "blockcert2-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -388,6 +415,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bc.bioauth2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/himanshu/Documents/Personal_Documents/blockcert/blockcert/BridgingHeader.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -398,8 +426,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = blockcert2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PNQ3TRY585;
+				DEVELOPMENT_TEAM = 6DSLY3RNV7;
 				INFOPLIST_FILE = "blockcert2-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -407,6 +436,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bc.bioauth2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/himanshu/Documents/Personal_Documents/blockcert/blockcert/BridgingHeader.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

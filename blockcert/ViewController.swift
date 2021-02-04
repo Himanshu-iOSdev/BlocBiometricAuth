@@ -9,8 +9,13 @@ import UIKit
 import LocalAuthentication
 
 class ViewController: UIViewController {
+  var isUnlocked: Bool = false
   
-
+  @IBOutlet var keyLabel: UILabel!
+  let appName = Bundle.main.infoDictionary!["app_name"] as? String ?? ""
+      let appIdentifierPrefix =
+        Bundle.main.infoDictionary!["AppIdentifierPrefix"] as? String ?? ""
+      let service = Bundle.main.bundleIdentifier ?? "test"
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -18,8 +23,29 @@ class ViewController: UIViewController {
   }
   
   @IBAction func onBtnClick(_ sender: Any) {
-    authenticationWithTouchID() //Function Call
 }
+  
+  
+  
+  @IBAction func showKeyBtn(_ sender: UIButton) {
+    if isUnlocked {
+      loadInfo()
+    } else {
+      authenticationWithTouchID() //Function Call
+    }
+  }
+  
+  
+  
+  @IBAction func saveKeyBtn(_ sender: UIButton) {
+    if isUnlocked {
+      let key = "Test\((arc4random_uniform(10)))"
+      print("Key = \(key)")
+      addPrivateKey(key: key)
+    } else {
+      authenticationWithTouchID() //Function Call
+    }
+  }
   
   func ShowAlert(message: String) {
     let alertController = UIAlertController(title: "Biometric Auth", message: message, preferredStyle:UIAlertController.Style.alert)
@@ -53,6 +79,7 @@ extension ViewController {
                 if success {
                   DispatchQueue.main.async {
                     self.ShowAlert(message: "Biometric Auth Worked")
+                    self.isUnlocked = true
                   }
                     
                 } else {
@@ -152,6 +179,34 @@ extension ViewController {
         
         return message
     }
+}
+
+extension ViewController {
+  
+  func loadInfo(userId: String? = nil) {
+    let accessGroup = appIdentifierPrefix + "com.blockcerts.front-office"
+    print("accessGrouploadInfo = \(accessGroup)")
+    let keychain = A0SimpleKeychain(service: service, accessGroup: accessGroup)
+    guard let data = keychain.data(forKey: "keychain-for-\(service)") else {
+      print("Empty data")
+      return }
+    guard let array = NSKeyedUnarchiver.unarchiveObject(with: data) as? String else {
+      print("Empty ArrayKeys ")
+      return }
+
+    print("Keys = \(array)")
+    keyLabel.text = array
+  }
+
+  func addPrivateKey(key: String) {
+    //privateKeys.append(key)
+    let accessGroup = appIdentifierPrefix + "com.blockcerts.front-office"
+    print("accessGroupaddPrivateKey = \(accessGroup)")
+    let data = NSKeyedArchiver.archivedData(withRootObject: key)
+    let keychain = A0SimpleKeychain(service: service, accessGroup:  accessGroup)
+    keychain.setData(data, forKey: "keychain-for-\(service)")
+  }
+
 }
 
 

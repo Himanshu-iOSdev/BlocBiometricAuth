@@ -27,14 +27,51 @@
                                     <action selector="onBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SdP-UE-OE6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLY-ic-QrL">
+                                <rect key="frame" x="157" y="533" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BcE-r6-uYD"/>
+                                    <constraint firstAttribute="width" constant="100" id="WbU-j9-FTB"/>
+                                </constraints>
+                                <state key="normal" title="Get Keys"/>
+                                <connections>
+                                    <action selector="showKeyBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FPy-jo-DI0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUo-8m-cHU">
+                                <rect key="frame" x="167" y="333" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="1ab-xz-mbJ"/>
+                                    <constraint firstAttribute="height" constant="30" id="ae6-jG-cfp"/>
+                                </constraints>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveKeyBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KuK-R1-GIt"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06w-Em-SNR">
+                                <rect key="frame" x="186" y="111" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="XLY-ic-QrL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="100" id="0cr-eU-bi5"/>
+                            <constraint firstItem="IUo-8m-cHU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="7q1-Um-60d"/>
                             <constraint firstItem="WhM-ON-ID3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DZ2-27-QBd"/>
                             <constraint firstItem="WhM-ON-ID3" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Jtb-jY-qYV"/>
+                            <constraint firstItem="06w-Em-SNR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="67" id="PNE-Xp-1E7"/>
+                            <constraint firstItem="IUo-8m-cHU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZKy-BB-TBG"/>
+                            <constraint firstItem="06w-Em-SNR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eKB-5N-TqE"/>
+                            <constraint firstItem="XLY-ic-QrL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u6w-c8-TMQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="keyLabel" destination="06w-Em-SNR" id="oN3-c2-xhT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
